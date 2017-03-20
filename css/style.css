@@ -1,0 +1,92 @@
+body {
+  position: relative;
+  font-size: x-large;
+  font-family: 'Slabo 27px', serif;
+  letter-spacing: .5px;
+  margin: 60px auto;
+  min-height: 665px;
+  width: 720px;
+  background-color: rgba(255, 255, 255, .75);
+  padding: 30px;
+}
+
+html {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../background.jpg");
+  background-size: 1700px;
+  background-position: -100px -100px;
+}
+
+#timesChecked, #parameters, #keyword {
+  font-size: x-large;
+}
+
+#timesCheckedLabel {
+  visibility: hidden;
+}
+
+#timesChecked {
+  width: 17px;
+}
+
+#links {
+  position: absolute;
+  bottom: 0;
+  font-size: large;
+  padding: 15px 0px 20px 0px;
+}
+
+.app, .response {
+  margin: 1px;
+}
+
+#parameters, #keyword, .button {
+  font-size: inherit;
+  font-family: inherit;
+  letter-spacing: inherit;
+}
+
+.button {
+  margin: 3px;
+  background-color: rgba(150, 120, 120, 1);
+  padding: 5px 12px;
+  border-radius: 5px;
+  transition-duration: .4s;
+}
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.button:disabled {
+  pointer-events: none;
+}
+
+.app {
+  width: 380px;
+}
+
+.response {
+  width: 430px;
+  text-align: center;
+}
+
+.app {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.application {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.description {
+  text-align: justify;
+}
+
+#keepGoing {
+  visibility: hidden;
