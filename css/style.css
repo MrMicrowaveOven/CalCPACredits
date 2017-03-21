@@ -65,6 +65,7 @@ html {
 }
 
 .app {
+  padding: 5px;
   width: 380px;
 }
 
@@ -73,9 +74,15 @@ html {
   text-align: center;
 }
 
+.dropdown {
+  border: 1px solid #ccc;
+  color: azure;
+  background: darkslategray;
+}
+
 .app {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .application {

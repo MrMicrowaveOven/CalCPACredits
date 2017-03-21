@@ -13,8 +13,9 @@
     To calculate credits, input the length of time in the class, as well as how many hits they have gotten.
     </div>
     <div class="application">
+      <br>
       <label class="app">Length of Class:
-        <select id="classLength">
+        <select id="classLength" class="dropdown">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -29,12 +30,9 @@
           <option value="12">12</option>
         </select>
       </label>
-
       <label class="app">Number of hits: <input type="text" name="numHits" id="numHits" value=""></label>
-
-
       <label class="app">Type of Class:
-        <select id="classType">
+        <select id="classType" class="dropdown">
           <option value="roundDown">Round Down</option>
           <option value="allOrNothing">All Or Nothing</option>
           <option value="fiftyMinuteHours">50 minute hours</option>
@@ -44,10 +42,10 @@
       <button id="calcCredits" class="button" onClick="showCredits()">How Many Credits?</button>
       <div class="response" id="response"></div><div class="response" id="response2"></div>
     </div>
-    <div class= "links" id="links">
+    <!-- <div class= "links" id="links">
       Written by Benjamin Zagorski.
       <br>
       Click <a href="https://github.com/MrMicrowaveOven/WhatPage"> here</a> for the github repo, or <a href="http://benjzagorski.online"> here</a> for a look at the rest of my portfolio.
-    </div>
+    </div> -->
   </body>
 </html>

@@ -28,14 +28,14 @@ function runTest(classLength, numHits, classType, result) {
   })
 }
 
-var classLengths = [1,2,3,4,5,6,7,8,9,10,11,12]
+var classLengths = [1,2,3,4,5,6,7,8]
 
 // console.log(request.calcCredits(12, 48, "allOrNothing"));
 classLengths.forEach(function(classLength) {
   [
     "allOrNothing",
-    // "roundDown",
-    // "fiftyMinuteHours"
+    "roundDown",
+    "fiftyMinuteHours"
   ].forEach(function(classType) {
   var maxHits = classLength * 4;
     for (var numHits = 0; numHits <= maxHits; numHits++) {
