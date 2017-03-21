@@ -76,8 +76,8 @@ html {
 
 .dropdown {
   border: 1px solid #ccc;
-  color: azure;
-  background: darkslategray;
+  color: black;
+  background: rgba(184, 134, 11, 0.45);
 }
 
 .app {
