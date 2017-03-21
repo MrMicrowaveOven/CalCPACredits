@@ -1,9 +1,21 @@
-function reset() {
-  document.getElementById("classLength").value = "";
-  document.getElementById("numHits").value = "";
-  document.getElementById("classType").value = "";
-}
+function updateHits() {
+  var classLength = document.getElementById("classLength").value;
+  var maxHits = classLength * 4;
 
+  var hitsDropdown = document.getElementById("numHits");
+
+  while (hitsDropdown.hasChildNodes()) {
+    hitsDropdown.removeChild(hitsDropdown.lastChild);
+  }
+
+  for (var hits = 0; hits <= maxHits; hits++) {
+    var option = document.createElement("option");
+    var optionNumber = document.createTextNode(hits);
+    option.setAttribute("value", hits);
+    option.appendChild(optionNumber);
+    hitsDropdown.appendChild(option);
+  }
+}
 function classLength() {
   return document.getElementById("classLength").value;
 }
@@ -45,7 +57,9 @@ function calcCredits(classLength, numHits, classType) {
 }
 
 function showCredits() {
-  document.getElementById("response").innerHTML = calcCredits(classLength(), numHits(), classType());
+  var numCredits = calcCredits(classLength(), numHits(), classType());
+  var displayString = numCredits + " credits!";
+  document.getElementById("response").innerHTML = displayString;
 }
 
 // module.exports = {

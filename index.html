@@ -15,7 +15,7 @@
     <div class="application">
       <br>
       <label class="app">Length of Class:
-        <select id="classLength" class="dropdown">
+        <select id="classLength" class="dropdown" onchange="updateHits()">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -30,7 +30,15 @@
           <option value="12">12</option>
         </select>
       </label>
-      <label class="app">Number of hits: <input type="text" name="numHits" id="numHits" value=""></label>
+      <label class="app">Number of hits:
+        <select class="dropdown" id="numHits">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </label>
       <label class="app">Type of Class:
         <select id="classType" class="dropdown">
           <option value="roundDown">Round Down</option>
@@ -40,7 +48,7 @@
       </label>
 
       <button id="calcCredits" class="button" onClick="showCredits()">How Many Credits?</button>
-      <div class="response" id="response"></div><div class="response" id="response2"></div>
+      <div class="response" id="response"></div>
     </div>
     <!-- <div class= "links" id="links">
       Written by Benjamin Zagorski.
