@@ -29,15 +29,15 @@ function runTest(classLength, numHits, classType, result) {
 }
 
 var classLengths = [1,2,3,4,5,6,7,8]
+var classTypes = [
+  "allOrNothing",
+  "roundDown",
+  "fiftyMinuteHours"
+]
 
-// console.log(request.calcCredits(12, 48, "allOrNothing"));
 classLengths.forEach(function(classLength) {
-  [
-    "allOrNothing",
-    "roundDown",
-    "fiftyMinuteHours"
-  ].forEach(function(classType) {
-  var maxHits = classLength * 4;
+  classTypes.forEach(function(classType) {
+    var maxHits = classLength * 4;
     for (var numHits = 0; numHits <= maxHits; numHits++) {
       var result = solutions[classType][classLength][numHits];
       runTest(classLength, numHits, classType, result)
