@@ -4,7 +4,7 @@ body {
   font-family: 'Slabo 27px', serif;
   letter-spacing: .5px;
   margin: 60px auto;
-  min-height: 665px;
+  min-height: 500px;
   width: 720px;
   background-color: rgba(119, 136, 153, 0.75);;
   padding: 30px;
@@ -39,7 +39,7 @@ html {
 }
 
 .app, .response {
-  margin: 1px;
+  margin: 5px;
 }
 
 #parameters, #keyword, .button {
@@ -92,7 +92,8 @@ html {
 }
 
 .description {
-  text-align: justify;
+  padding: 123px 70px 0px 70px;
+  text-align: center;
 }
 
 #keepGoing {
