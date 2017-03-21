@@ -2,29 +2,47 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>What Page am I on?</title>
+    <title>Credits</title>
     <script type="text/javascript" src="request.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
   </head>
   <body>
     <div class="description">
-      Welcome to <strong> What Page Am I On? </strong>  Given a set of search terms and a website url, this app returns the rank of the site in Google's search results.
-      <br><br>
-      For example, using the search terms "social network" with url "facebook.com" will result in a 73 because "facebook.com" is the 73th result of that Google search.
-      <br><br>
-      Note that <strong> What Page Am I On? </strong> results may differ slightly from a manual search, since a manual search involves cookies, location, etc.
+    To calculate credits, input the length of time in the class, as well as how many hits they have gotten.
     </div>
     <div class="application">
-      <label id="timesCheckedLabel">Times Checked<input type="text" id="timesChecked" name="timesChecked" value="0" disabled="true"></label>
-      <label class="app">Search Terms: <input type="text" name="parameters" id="parameters" value=""></label>
-      <label class="app">URL: <input type="text" name="keyword" id="keyword" value=""></label>
-      <button id="search" class="button" onClick="search()">Which result is it?</button>
-      <button class="button" onClick="reset()" id="reset">Reset</button>
+      <label class="app">Length of Class:
+        <select id="classLength">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+      </label>
+
+      <label class="app">Number of hits: <input type="text" name="numHits" id="numHits" value=""></label>
+
+
+      <label class="app">Type of Class:
+        <select id="classType">
+          <option value="roundDown">Round Down</option>
+          <option value="allOrNothing">All Or Nothing</option>
+          <option value="fiftyMinuteHours">50 minute hours</option>
+        </select>
+      </label>
+
+      <button id="calcCredits" class="button" onClick="showCredits()">How Many Credits?</button>
       <div class="response" id="response"></div><div class="response" id="response2"></div>
-      <button class="button" onClick="keepGoing()" id="keepGoing">Check next page!</button>
     </div>
     <div class= "links" id="links">
       Written by Benjamin Zagorski.

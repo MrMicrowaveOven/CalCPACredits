@@ -4,11 +4,12 @@
   "description": "",
   "main": "response.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "Benjamin Zagorski",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.1.1"
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
   }
 }
