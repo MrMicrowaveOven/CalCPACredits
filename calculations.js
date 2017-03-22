@@ -22,6 +22,9 @@ function calcCredits(classLength, numHits, classType) {
   if (classType == "roundDown") {
     var proRated = grade * classLength;
     var numCredits = Math.floor(proRated * 2)/2;
+    if (numCredits < 1) {
+      numCredits = 0;
+    }
     return numCredits;
   }
 }

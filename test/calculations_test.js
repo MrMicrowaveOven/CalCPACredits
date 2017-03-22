@@ -11,15 +11,15 @@ function runTest(classLength, numHits, classType, result) {
   })
 }
 
-var classLengths = [1,2,3,4,5,6,7,8]
+var classLengths = [1,1.5,2,2.5,3,3.5,4,4.5,5,5.5,6,6.5,7,7.5,8,16]
 var classTypes = [
   "allOrNothing",
   "roundDown",
   "fiftyMinuteHours"
 ]
 
-classLengths.forEach(function(classLength) {
-  classTypes.forEach(function(classType) {
+classTypes.forEach(function(classType) {
+  classLengths.forEach(function(classLength) {
     var maxHits = classLength * 4;
     for (var numHits = 0; numHits <= maxHits; numHits++) {
       var result = solutions[classType][classLength][numHits];
