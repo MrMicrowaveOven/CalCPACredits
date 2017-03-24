@@ -11,12 +11,29 @@ function runTest(classLength, numHits, classType, result) {
   })
 }
 
-var classLengths = [1,1.5,2,2.5,3,3.5,4,4.5,5,5.5,6,6.5,7,7.5,8,16]
+var classLengths = [
+  1,
+  1.5,
+  2,
+  2.5,
+  3,
+  3.5,
+  4,
+  4.5,
+  5,
+  5.5,
+  6,
+  6.5,
+  7,
+  7.5,
+  8,
+  16
+];
 var classTypes = [
   "allOrNothing",
   "roundDown",
   "fiftyMinuteHours"
-]
+];
 
 classTypes.forEach(function(classType) {
   classLengths.forEach(function(classLength) {
