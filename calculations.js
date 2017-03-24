@@ -1,7 +1,7 @@
 function calcCredits(classLength, numHits, classType) {
   var maxHits = classLength * 4;
   // perfectNumber is what a student needs to get to achieve a perfect score.
-  var perfectNumber = Math.floor(maxHits * 3 / 4);
+  var perfectNumber = Math.ceil(maxHits * 3.0 / 4);
   // grade is the percentage of hits they got out of the perfectNumber.
   var grade = numHits * 1.0 / perfectNumber;
   if (grade > 1.0) {
@@ -9,8 +9,8 @@ function calcCredits(classLength, numHits, classType) {
   }
 
 // If it's all or nothing, they either have perfect (grade == 1) or nothing.
-// 1-hour classes are always considered allOrNothing
-  if (classType == "allOrNothing" || (classLength == 1)) {
+// 1-hour roundDown classes are always considered allOrNothing
+  if (classType == "allOrNothing" || (classLength == 1 && classType == "roundDown")) {
     if (grade >= 1) {
       return classLength;
     } else {
@@ -18,9 +18,9 @@ function calcCredits(classLength, numHits, classType) {
     }
   }
 
-// For fiftyMinuteHours, I simply multiply the classLength by 50/60,
-//  then round to the nearest .5 hour.
-  if (classType == "fiftyMinuteHours"  && classLength > 1) {
+  // For fiftyMinuteHours, I simply multiply the classLength by 50/60,
+  //  then round down to the nearest .5 hour.
+  if (classType == "fiftyMinuteHours") {
     classLength = classLength * 50.0/60;
     classLength = Math.floor(classLength * 2)/2;
   }
